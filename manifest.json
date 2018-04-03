@@ -13,7 +13,7 @@
   "background": {
     "scripts": [
       "jquery.js",
-      "betterReddit-background.js"
+      "backgroundScript.js"
     ]
   },
   "content_scripts": [
@@ -23,7 +23,7 @@
       ],
       "js": [
         "jquery.js",
-        "betterReddit-contentScript.js"
+        "contentScript.js"
       ],
       "matches": [
         "*://*.reddit.com/r/*",
