@@ -1,0 +1,37 @@
+{
+  "manifest_version": 2,
+  "name": "betterReddit",
+  "description": "This extension makes reddit experience better",
+  "version": "0.01",
+  
+  "permissions": [
+    "history",
+    "tabs",
+    "http://*/*"
+  ],
+  
+  "background": {
+    "scripts": [
+      "jquery.js",
+      "betterReddit-background.js"
+    ]
+  },
+  "content_scripts": [
+    {
+      "exclude_matches": [
+        "*://*.reddit.com/r/*/comments/*"
+      ],
+      "js": [
+        "jquery.js",
+        "betterReddit-contentScript.js"
+      ],
+      "matches": [
+        "*://*.reddit.com/r/*",
+        "*://*.reddit.com/",
+        "*://*.reddit.com/me/m/*",
+        "*://*.reddit.com/user/*/m/*"
+      ],
+      "run_at": "document_end"
+    }
+  ]
+}
